@@ -1,0 +1,22 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Snake</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="snake.js"></script>
+    </head>
+
+    <body>
+        <div class="Wrapper">
+            <div id="GameDiv"></div>
+        </div>
+    </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() { 
+            const game = new SnakeGame("GameDiv");
+        });
+    </script>
+</html>
+
