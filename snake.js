@@ -122,7 +122,6 @@ SnakeGame.prototype.update = function() {
     
     //removing the tail
     let node = snake.node;
-    console.log(node);
     while(node){
         if(node.next){
             //we are not the last (tail)
@@ -182,6 +181,7 @@ SnakeGame.prototype.nodeMap = function(nodes, f){
         count++; 
     }
 
+    console.log(results); //should this be array of undefined..?
     return results;
 }
 
