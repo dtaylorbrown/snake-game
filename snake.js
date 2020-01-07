@@ -138,12 +138,11 @@ SnakeGame.prototype.update = function() {
     }
 
     //detect collision with self
-    // this.nodeMap(snake.node, (node, idx) => {
-    //     if(idx > 0 && snake.node.pos === node.pos){
-    //         //above is never true...?
-    //         this.gameOver = true;
-    //     }
-    // });
+    this.nodeMap(this.snake.node, (node, idx) => {
+        if(idx > 0 && this.snake.node.pos.x === node.pos.x && this.snake.node.pos.y === node.pos.y){
+            this.gameOver = true;
+        }
+    });
 
     if(this.gameOver){
         this.init();
@@ -181,7 +180,6 @@ SnakeGame.prototype.nodeMap = function(nodes, f){
         count++; 
     }
 
-    console.log(results); //should this be array of undefined..?
     return results;
 }
 
